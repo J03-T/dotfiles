@@ -1,0 +1,8 @@
+vim.keymap.set("n", "<leader>Ga", ":Git add %<CR>", { silent = true, desc = "Add current file to git" })
+vim.keymap.set("n", "<leader>Gc", ":Git commit -a<CR>", { silent = true, desc = "Create new commit" })
+vim.keymap.set("n", "<leader>Gpu", ":Git push<CR>", { silent = true, desc = "Push to remote" })
+vim.keymap.set("n", "<leader>Gpl", ":Git pull<CR>", { silent = true, desc = "Pull from remote" })
+vim.keymap.set("n", "<leader>Gs", ":Git status<CR>", { silent = true, desc = "Git status" })
+vim.keymap.set("n", "<leader>Gf", ":Git fetch<CR>", { silent = true, desc = "Git fetch" })
+vim.keymap.set("n", "<leader>Gh", ":GBrowse<CR>", { silent = true, desc = "Open file in remote" })
+vim.keymap.set("n", "<leader>Gb", ":Git blame<CR>", { silent = true, desc = "Git blame" })
