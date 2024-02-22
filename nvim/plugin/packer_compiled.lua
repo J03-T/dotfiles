@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/home/joe/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -128,11 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["miasma.nvim"] = {
-    loaded = true,
-    path = "/home/joe/.local/share/nvim/site/pack/packer/start/miasma.nvim",
-    url = "https://github.com/xero/miasma.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -174,12 +164,6 @@ _G.packer_plugins = {
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["speedtyper.nvim"] = {
-    config = { "\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15speedtyper\frequire\0" },
-    loaded = true,
-    path = "/home/joe/.local/share/nvim/site/pack/packer/start/speedtyper.nvim",
-    url = "https://github.com/NStefan002/speedtyper.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -189,16 +173,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
-  },
-  vim = {
-    loaded = true,
-    path = "/home/joe/.local/share/nvim/site/pack/packer/start/vim",
-    url = "https://github.com/Catppuccin/vim"
-  },
-  ["vim-256noir"] = {
-    loaded = true,
-    path = "/home/joe/.local/share/nvim/site/pack/packer/start/vim-256noir",
-    url = "https://github.com/andreasvc/vim-256noir"
   },
   ["vim-doge"] = {
     loaded = true,
@@ -215,6 +189,11 @@ _G.packer_plugins = {
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
     url = "https://github.com/tpope/vim-rhubarb"
   },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/joe/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
   vimtex = {
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/vimtex",
@@ -228,10 +207,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: speedtyper.nvim
-time([[Config for speedtyper.nvim]], true)
-try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15speedtyper\frequire\0", "config", "speedtyper.nvim")
-time([[Config for speedtyper.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

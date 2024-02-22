@@ -25,7 +25,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
         vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
         vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
-        vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<cr>', { buffer = event.buf, silent = true, desc = "Format code" })
+        vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<cr>',
+            { buffer = event.buf, silent = true, desc = "Format code" })
     end
 })
 
@@ -55,6 +56,19 @@ local default_setup = function(server)
 
                         -- mypy
                         pyls_mypy = { enabled = true, live_mode = true },
+                    },
+                },
+            },
+        }
+    elseif server == 'rust_analyzer' then
+        lsp_setup = {
+            settings = {
+                ['rust-analyzer'] = {
+                    checkOnSave = {
+                        allFeatures = true,
+                        overrideCommand = {
+                            'cargo', 'clippy', '--all-features', '--all-targets', '--message-format=json'
+                        },
                     },
                 },
             },

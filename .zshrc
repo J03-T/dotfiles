@@ -116,14 +116,17 @@ if [ -d "$HOME/.dotnet/tools" ]; then
 fi
 
 
-[ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
+#[ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+export PATH=$PATH:/opt/metasploit-framework/bin
+
 alias disable-palm-rejection="gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing false"
 alias enable-palm-rejection="gsettings set org.gnome.desktop.peripherals.touchpad disable-while-typing true"
 
-eval $(thefuck --alias)
 source /usr/share/fzf/shell/key-bindings.zsh
+
+[ -f "/home/joe/.ghcup/env" ] && source "/home/joe/.ghcup/env" # ghcup-env

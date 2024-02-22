@@ -1,3 +1,21 @@
 [submodule "kitty/kitty-themes"]
 	path = kitty/kitty-themes
 	url = https://github.com/dexpota/kitty-themes
+[submodule "tmux/plugins/tmux-fzf"]
+	path = tmux/plugins/tmux-fzf
+	url = https://github.com/sainnhe/tmux-fzf
+[submodule "tmux/plugins/tmux-power"]
+	path = tmux/plugins/tmux-power
+	url = https://github.com/wfxr/tmux-power
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/plugins/tmux-sensible"]
+	path = tmux/plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible
+[submodule "tmux/plugins/tmux-ssh-split"]
+	path = tmux/plugins/tmux-ssh-split
+	url = https://github.com/pschmitt/tmux-ssh-split
+[submodule "tmux/plugins/tmux-yank"]
+	path = tmux/plugins/tmux-yank
+	url = https://github.com/tmux-plugins/tmux-yank
