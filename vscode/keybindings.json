@@ -1,0 +1,13 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+k a",
+        "command": "workbench.action.toggleActivityBarVisibility",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k s",
+        "command": "workbench.action.toggleStatusbarVisibility",
+        "when": "editorTextFocus"
+    }
+]
