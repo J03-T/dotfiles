@@ -1,12 +1,6 @@
 local lspconfig = require('lspconfig')
 local lsp_defaults = lspconfig.util.default_config
 
-lsp_defaults.capabilities = vim.tbl_deep_extend(
-    'force',
-    lsp_defaults.capabilities,
-    require('cmp_nvim_lsp').default_capabilities()
-)
-
 lspconfig.pylsp.setup {
     filetypes = { 'python' },
     on_attach = function(client, _)
@@ -119,31 +113,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 
-local cmp = require('cmp')
+vim.keymap.set('i', '<C-n>', '<C-x><C-o>', { silent = true })
 
-cmp.setup({
-    sources = {
-        { name = 'nvim_lsp' },
-    },
-    mapping = cmp.mapping.preset.insert({
-        ['<CR>'] = cmp.mapping.confirm({ select = false }),
-        ['<Tab>'] = cmp.mapping.confirm({ select = false }),
-        ['<C-Space>'] = cmp.mapping.complete(),
-    }),
-    snippet = {
-        expand = function(args)
-            require('luasnip').lsp_expand(args.body)
-        end,
-    },
-    completion = {
-        autocomplete = false
-    }
-})
 vim.api.nvim_set_keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>",
     { noremap = true, silent = true, desc = "Show line diagnostics" })
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics,
-    {
+    vim.lsp.diagnostic.on_publish_diagnostics, {
         virtual_text = false,
         signs = true,
         update_in_insert = true,

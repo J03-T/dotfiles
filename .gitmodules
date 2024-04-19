@@ -19,30 +19,24 @@
 [submodule "tmux/plugins/tmux-yank"]
 	path = tmux/plugins/tmux-yank
 	url = git@github.com:tmux-plugins/tmux-yank
-[submodule "nvim/pack/cmp-nvim-lsp"]
-	path = nvim/pack/cmp-nvim-lsp
-	url = git@github.com:hrsh7th/cmp-nvim-lsp
-[submodule "nvim/pack/nvim-cmp"]
-	path = nvim/pack/nvim-cmp
-	url = git@github.com:hrsh7th/nvim-cmp
-[submodule "nvim/pack/telescope.nvim"]
-	path = nvim/pack/telescope.nvim
-	url = git@github.com:nvim-telescope/telescope.nvim
-[submodule "nvim/pack/nvim-treesitter"]
-	path = nvim/pack/nvim-treesitter
-	url = git@github.com:nvim-treesitter/nvim-treesitter
-[submodule "nvim/pack/plenary.nvim"]
-	path = nvim/pack/plenary.nvim
-	url = git@github.com:nvim-lua/plenary.nvim
-[submodule "nvim/pack/vim-fugitive"]
-	path = nvim/pack/vim-fugitive
-	url = git@github.com:tpope/vim-fugitive
-[submodule "nvim/pack/nvim-lspconfig"]
-	path = nvim/pack/nvim-lspconfig
-	url = git@github.com:neovim/nvim-lspconfig
-[submodule "nvim/pack/vim-tmux-navigator"]
-	path = nvim/pack/vim-tmux-navigator
-	url = git@github.com:christoomey/vim-tmux-navigator
 [submodule "tmux/tpm"]
 	path = tmux/tpm
 	url = git@github.com:tmux-plugins/tpm
+[submodule "nvim/pack/nvim-lspconfig/start/nvim-lspconfig"]
+	path = nvim/pack/nvim-lspconfig/start/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig
+[submodule "nvim/pack/plenary/start/plenary.nvim"]
+	path = nvim/pack/plenary/start/plenary.nvim
+	url = git@github.com:nvim-lua/plenary.nvim
+[submodule "nvim/pack/telescope/start/telescope.nvim"]
+	path = nvim/pack/telescope/start/telescope.nvim
+	url = git@github.com:nvim-telescope/telescope.nvim
+[submodule "nvim/pack/vim-fugitive/start/vim-fugitive"]
+	path = nvim/pack/vim-fugitive/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive
+[submodule "nvim/pack/vim-tmux-navigator/start/vim-tmux-navigator"]
+	path = nvim/pack/vim-tmux-navigator/start/vim-tmux-navigator
+	url = git@github.com:christoomey/vim-tmux-navigator
+[submodule "nvim/pack/nvim-treesitter/start/nvim-treesitter"]
+	path = nvim/pack/nvim-treesitter/start/nvim-treesitter
+	url = git@github.com:nvim-treesitter/nvim-treesitter

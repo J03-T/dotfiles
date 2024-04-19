@@ -2,6 +2,7 @@ require("nvim.comment")
 require("nvim.variables")
 require("nvim.keys")
 require('nvim.commands')
+require('nvim.autocmd')
 if vim.g.neovide then
     require("nvim.neovide")
 end
