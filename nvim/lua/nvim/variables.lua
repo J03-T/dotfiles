@@ -11,3 +11,9 @@ vim.opt.colorcolumn = "80,120"
 if vim.opt.filetype == "tex" then
     vim.opt.spell = true
 end
+vim.opt.termguicolors = true
+vim.opt.cursorcolumn = false
+vim.opt.cursorline = true
+vim.opt.guicursor="n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor/lCursor,r-cr:hor20,o:hor50"
+vim.opt.background = 'light'
+vim.opt.modeline = false  -- arbitrary code execution

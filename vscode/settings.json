@@ -5,7 +5,6 @@
     "window.menuBarVisibility": "toggle",
     "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font'",
     "editor.minimap.enabled": false,
-    "dotnetAcquisitionExtension.enableTelemetry": false,
     "zenMode.hideLineNumbers": false,
     "vim.handleKeys": {
         "<C-d>": true,
@@ -116,35 +115,42 @@
     "haskell.manageHLS": "GHCup",
     "workbench.settings.editor": "json",
     "editor.rulers": [
-        80
+        80,
+        120
     ],
     "editor.fontFamily": "'Cascadia Code'",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.scrollbar.vertical": "hidden",
-    "breadcrumbs.enabled": false,
     "workbench.editorAssociations": {
         "*.pdf": "latex-workshop-pdf-hook"
     },
     "window.titleBarStyle": "custom",
-    "workbench.colorTheme": "Everforest Dark",
+    "workbench.colorTheme": "Catppuccin Macchiato",
     "workbench.editor.showTabs": "none",
+    "[rust]": {
+        "editor.inlayHints.enabled": "offUnlessPressed",
+    },
     "rust-analyzer.inlayHints.closingBraceHints.enable": true,
-    "rust-analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": true,
+    "rust-analyzer.inlayHints.typeHints.enable": true,
     "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
     "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
     "rust-analyzer.inlayHints.reborrowHints.enable": "never",
-    "rust-analyzer.inlayHints.bindingModeHints.enable": false,
-    "rust-analyzer.inlayHints.implicitDrops.enable": false,
+    "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+    "rust-analyzer.inlayHints.implicitDrops.enable": true,
     "rust-analyzer.inlayHints.closureCaptureHints.enable": true,
-    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": true,
+    "rust-analyzer.inlayHints.maxLength": null,
+    "rust-analyzer.assist.emitMustUse": true,
+    "rust-analyzer.cargo.autoreload": true,
+    "rust-analyzer.check.command": "clippy",
     "window.customTitleBarVisibility": "windowed",
     "hediet.vscode-drawio.resizeImages": null,
     "editor.cursorSmoothCaretAnimation": "on",
     "files.simpleDialog.enable": true,
     "gitlens.telemetry.enabled": false,
-    "gitlens.liveshare.enabled": true,
+    "gitlens.liveshare.enabled": false,
     "gitlens.currentLine.enabled": false,
     "editor.formatOnSave": true,
     "editor.bracketPairColorization.enabled": false,
@@ -154,6 +160,29 @@
     "cmake.showOptionsMovedNotification": false,
     "C_Cpp.intelliSenseEngine": "disabled",
     "git.autofetch": true,
-    "workbench.statusBar.visible": false,
-    "workbench.activityBar.location": "hidden"
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "top",
+    "editor.stickyScroll.enabled": false,
+    "breadcrumbs.enabled": false,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "mypy-type-checker.reportingScope": "workspace",
+    "mypy-type-checker.preferDaemon": false,
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "catppuccin.bracketMode": "neovim",
+    "catppuccin.syncWithIconPack": true,
+    "catppuccin.workbenchMode": "minimal",
+    "catppuccin.italicKeywords": false,
+    "workbench.statusBar.visible": false
 }
