@@ -15,10 +15,10 @@ vim.keymap.set("n", "<leader>h", ":wincmd h<CR>", { silent = true, desc = "Move 
 vim.keymap.set("n", "<leader>j", ":wincmd j<CR>", { silent = true, desc = "Move down" })
 vim.keymap.set("n", "<leader>k", ":wincmd k<CR>", { silent = true, desc = "Move up" })
 vim.keymap.set("n", "<leader>l", ":wincmd l<CR>", { silent = true, desc = "Move right" })
-vim.keymap.set("n", "<M-h>", ":wincmd h<CR>", { silent = true, desc = "Move left" })
-vim.keymap.set("n", "<M-j>", ":wincmd j<CR>", { silent = true, desc = "Move down" })
-vim.keymap.set("n", "<M-k>", ":wincmd k<CR>", { silent = true, desc = "Move up" })
-vim.keymap.set("n", "<M-l>", ":wincmd l<CR>", { silent = true, desc = "Move right" })
+vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { silent = true, desc = "Move left" })
+vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", { silent = true, desc = "Move down" })
+vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", { silent = true, desc = "Move up" })
+vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { silent = true, desc = "Move right" })
 vim.keymap.set("n", "<M-+>", ":vertical resize +5<CR>", { silent = true, desc = "Increase width" })
 vim.keymap.set("n", "<M-->", ":vertical resize -5<CR>", { silent = true, desc = "Decrease width" })
 vim.keymap.set("n", "<M-]>", ":resize +5<CR>", { silent = true, desc = "Increase height" })
@@ -42,3 +42,12 @@ vim.keymap.set("v", "<leader>/", commentLine, {silent = true, desc = "Comment cu
 vim.keymap.set("i", "<C-/>", commentLine, {silent = true, desc = "Comment current line"})
 vim.keymap.set("n", "gq", ":cnext<CR>", { silent = true, desc = "Go to next quickfix item"})
 vim.keymap.set("n", "gQ", ":cprevious<CR>", { silent = true, desc = "Go to previou quickfix item"})
+vim.keymap.set("n", "qo", ":copen<CR>", { silent = true, desc = "Open quickfix window"})
+vim.keymap.set("n", "qc", ":cclose<CR>", { silent = true, desc = "Close quickfix window"})
+vim.keymap.set("n", "<leader>S", function()
+    if vim.opt.laststatus:get() == 2 then
+        vim.opt.laststatus = 0
+    else
+        vim.opt.laststatus = 2
+    end
+end, { silent = false, desc = "Toggle status bar" })

@@ -93,22 +93,21 @@ vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(event)
         local opts = { buffer = event.buf }
-        vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
-        vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_definitions<cr>', opts)
-        vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-        vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', opts)
-        vim.keymap.set('n', 'gt', '<cmd>Telescope lsp_type_definitions<cr>', opts)
-        vim.keymap.set('n', 'gu', '<cmd>Telescope lsp_references<cr>', opts)
-        vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
-        vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-        vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
-        vim.keymap.set('n', 'gp', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
-        vim.keymap.set('n', 'gn', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
+        vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+        vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+        vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, opts)
+        vim.keymap.set('n', 'gu', vim.lsp.buf.references, opts)
+        vim.keymap.set('i', '<c-k>', vim.lsp.buf.signature_help, opts)
+        vim.keymap.set('n', 'gr', vim.lsp.buf.rename, opts)
+        vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, opts)
+        vim.keymap.set('n', 'gp', vim.diagnostic.goto_prev, opts)
+        vim.keymap.set('n', 'gn', vim.diagnostic.goto_next, opts)
         vim.keymap.set('n', 'gP', '<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.ERROR})<cr>', opts)
         vim.keymap.set('n', 'gN', '<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.ERROR})<cr>', opts)
-        vim.keymap.set('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<cr>',
+        vim.keymap.set('n', '<leader>f', vim.lsp.buf.format,
             { buffer = event.buf, silent = true, desc = "Format code" })
-        vim.keymap.set('i', '<c-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
     end
 })
 
