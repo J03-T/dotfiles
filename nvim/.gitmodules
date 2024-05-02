@@ -1,0 +1,6 @@
+[submodule "pack/nvim-lspconfig/start/nvim-lspconfig"]
+	path = pack/nvim-lspconfig/start/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig
+[submodule "pack/vim-fugitive/start/vim-fugitive"]
+	path = pack/vim-fugitive/start/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive

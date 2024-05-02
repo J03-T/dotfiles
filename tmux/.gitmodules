@@ -1,0 +1,9 @@
+[submodule "plugins/tmux-yank"]
+	path = plugins/tmux-yank
+	url = git@github.com:tmux-plugins/tmux-yank
+[submodule "plugins/tmux-ssh-split"]
+	path = plugins/tmux-ssh-split
+	url = git@github.com:pschmitt/tmux-ssh-split
+[submodule "plugins/tmux-sensible"]
+	path = plugins/tmux-sensible
+	url = git@github.com:tmux-plugins/tmux-sensible
