@@ -1,7 +1,8 @@
 require('nvim.comment')
+require('nvim.format')
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", ":e .<CR>", { silent = true, desc = "Browse files in project root" })
+vim.keymap.set("n", "<leader>pV", ":e .<CR>", { silent = true, desc = "Browse files in project root" })
 vim.keymap.set("v", "<leader>tf", "!pandoc -t markdown-simple_tables<CR>",
     { silent = true, desc = "Format markdown table" })
 vim.keymap.set("n", "<leader>id", '"=strftime(\'%d-%m-%Y\')<CR>p"', { silent = true, desc = "Insert current date" })
@@ -51,3 +52,4 @@ vim.keymap.set("n", "<leader>S", function()
         vim.opt.laststatus = 2
     end
 end, { silent = false, desc = "Toggle status bar" })
+vim.keymap.set("n", "<leader>f", formatFile, {silent = false, desc = "Format current file"})

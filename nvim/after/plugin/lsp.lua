@@ -89,6 +89,7 @@ lspconfig.texlab.setup {
 lspconfig.marksman.setup {
 }
 
+
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(event)
@@ -106,7 +107,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gn', vim.diagnostic.goto_next, opts)
         vim.keymap.set('n', 'gP', '<cmd>lua vim.diagnostic.goto_prev({severity = vim.diagnostic.severity.ERROR})<cr>', opts)
         vim.keymap.set('n', 'gN', '<cmd>lua vim.diagnostic.goto_next({severity = vim.diagnostic.severity.ERROR})<cr>', opts)
-        vim.keymap.set('n', '<leader>f', vim.lsp.buf.format,
+        vim.keymap.set('n', '<leader>F', vim.lsp.buf.format,
             { buffer = event.buf, silent = true, desc = "Format code" })
     end
 })
